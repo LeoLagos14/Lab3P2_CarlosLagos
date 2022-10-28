@@ -26,6 +26,7 @@ public class Lab3P2_CarlosLagos {
         int CS = 0;
         int AC = 0;
         int DG = 0;
+        String tpersonaje = "";
         
         boolean centinela = true;
  
@@ -71,6 +72,8 @@ public class Lab3P2_CarlosLagos {
                                 invocacion = lea.nextLine();
                                 CS = 97;
                                 AC = 40;
+                                System.out.println("El tipo de personaje del Clerigo es Lead");
+                                tpersonaje = "Lead";
                                 
                                 centinela1 = false;
                             }//fin 1
@@ -119,6 +122,40 @@ public class Lab3P2_CarlosLagos {
                                 int xp = lea.nextInt();
                                 CS = 93;
                                 AC = 65;
+                                tpersonaje = "";
+                                boolean centinela7 = true;
+                                while (centinela7 == true) {
+                                    System.out.println("Tipos de personajes para Barbaros");
+                                    System.out.println("1) Lead");
+                                    System.out.println("2) Support");
+                                    System.out.println("3) Offensive");
+                                    System.out.println("Ingrese el tipo de personajes que quiere para su personaje: ");
+                                    int tp = lea.nextInt();
+
+                                    switch (tp) {
+                                        case 1: {
+                                            tpersonaje = "Lead";
+                                            centinela7 = false;
+                                        }//fin 1
+                                        break;
+
+                                        case 2: {
+                                            tpersonaje = "Support";
+                                            centinela7 = false;
+                                        }//fin 2
+                                        break;
+
+                                        case 3: {
+                                            tpersonaje = "Offensive";
+                                            centinela7 = false;
+                                        }//fin 3
+                                        break;
+
+                                        default:
+                                            System.out.println("Opcion no disponible");
+                                            centinela7 = true;
+                                    }//fin switch
+                                }//fin while
                             }//fin 2
                             break;
 

@@ -12,13 +12,13 @@ package lab3p2_carloslagos;
 public class Personajes {
     
     protected int HP,AC,DG,years;
-    protected String nombre,raza,nacionalidad,tipoP,descripcion;
+    protected String nombre,raza,nacionalidad,tipoP,descripcion,tpersonaje;
     protected double altura,peso;
 
     public Personajes() {
     }
 
-    public Personajes(int HP, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso,String descripcion) {
+    public Personajes(int HP, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso,String descripcion,String tpersonaje) {
         this.HP = HP;
         this.AC = AC;
         this.DG = DG;
@@ -30,6 +30,7 @@ public class Personajes {
         this.altura = altura;
         this.peso = peso;
         this.descripcion = descripcion;
+        this.tpersonaje = tpersonaje;
     }
 
     public int getHP() {
@@ -96,6 +97,22 @@ public class Personajes {
         this.tipoP = tipoP;
     }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getTpersonaje() {
+        return tpersonaje;
+    }
+
+    public void setTpersonaje(String tpersonaje) {
+        this.tpersonaje = tpersonaje;
+    }
+
     public double getAltura() {
         return altura;
     }
@@ -111,6 +128,8 @@ public class Personajes {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+
+    
 
     @Override
     public String toString() {

@@ -22,8 +22,8 @@ public class Picaro extends Personajes{
         this.cantrobos = cantrobos;
     }
 
-    public Picaro(String tinstrumento, int cantrobos, int HP, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso, String descripcion) {
-        super(HP, AC, DG, years, nombre, raza, nacionalidad, tipoP, altura, peso, descripcion);
+    public Picaro(String tinstrumento, int cantrobos, int HP, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso, String descripcion,String tpersonaje) {
+        super(HP, AC, DG, years, nombre, raza, nacionalidad, tipoP, altura, peso, descripcion,tpersonaje);
         this.tinstrumento = tinstrumento;
         this.cantrobos = cantrobos;
     }
