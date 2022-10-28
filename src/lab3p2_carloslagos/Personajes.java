@@ -11,9 +11,9 @@ package lab3p2_carloslagos;
  */
 public class Personajes {
     
-    private int HP,AC,DG,years;
-    private String nombre,raza,nacionalidad,tipoP,descripcion;
-    double altura,peso;
+    protected int HP,AC,DG,years;
+    protected String nombre,raza,nacionalidad,tipoP,descripcion;
+    protected double altura,peso;
 
     public Personajes() {
     }

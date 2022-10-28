@@ -22,6 +22,7 @@ public class Lab3P2_CarlosLagos {
         
         ArrayList personajes = new ArrayList();
         
+        
         boolean centinela = true;
  
         
@@ -44,12 +45,12 @@ public class Lab3P2_CarlosLagos {
                     
                     boolean centinela1 = true;
                     while (centinela1 == true) {                        
-                        System.out.println("Elija el tipo de personaje con el que desea jugar: ");
+                        System.out.println("Elija la clase de personaje con el que desea jugar: ");
                         System.out.println("1) Clerigo");
                         System.out.println("2) Barbaro");
                         System.out.println("3) Mago");
                         System.out.println("4) Picaro");
-                        System.out.println("Ingrese el numero donde esta el tipo que desea: ");
+                        System.out.println("Ingrese el numero donde esta la clase de personaje que desea: ");
                         int opcion1 = lea.nextInt();
                         
 
@@ -57,7 +58,14 @@ public class Lab3P2_CarlosLagos {
                             case 1: {
                                 
                                 System.out.println("Clerigo");
-                                      
+                                String creencia;
+                                System.out.println("Ingrese el Dios/demonio del cual su personaje es creyente: ");
+                                lea.nextLine();
+                                creencia = lea.nextLine();
+                                String invocacion;
+                                System.out.println("Ingrese el tipo de invocacion: ");
+                                invocacion = lea.nextLine();
+                                
                                 centinela1 = false;
                             }//fin 1
                             break;
@@ -65,6 +73,43 @@ public class Lab3P2_CarlosLagos {
                             case 2: {
                                
                                 System.out.println("Barbaro");
+                                String arma = "";
+                                boolean centinela4 = true;
+                                while (centinela4 == true) {
+                                    System.out.println("Tipos de arma");
+                                    System.out.println("1) Pesada");
+                                    System.out.println("2) Ligera");
+                                    System.out.println("3) Escudo");
+                                    System.out.println("Ingrese el numero del arma que quiere para su personaje: ");
+                                    int oparma = lea.nextInt();
+
+                                    switch (oparma) {
+                                        case 1: {
+                                            arma = "Pesada";
+                                            centinela4 = false;
+                                        }//fin 1
+                                        break;
+
+                                        case 2: {
+                                            arma = "Ligera";
+                                            centinela4 = false;
+                                        }//fin 2
+                                        break;
+
+                                        case 3: {
+                                            arma = "escudo";
+                                            centinela4 = false;
+                                        }//fin 3
+                                        break;
+
+                                        default:
+                                            System.out.println("Opcion no disponible");
+                                            centinela4 = true;
+                                    }//fin switch
+                                }//fin while
+                                
+                                
+                                
                                 centinela1 = false;
                             }//fin 1
                             break;
