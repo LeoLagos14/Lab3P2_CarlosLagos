@@ -6,6 +6,7 @@
 package lab3p2_carloslagos;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -19,9 +20,12 @@ public class Lab3P2_CarlosLagos {
      */
     public static void main(String[] args) {
         Scanner lea = new Scanner(System.in);
-        
+        Random r = new Random();
         ArrayList personajes = new ArrayList();
-        
+        int HP = 0;
+        int CS = 0;
+        int AC = 0;
+        int DG = 0;
         
         boolean centinela = true;
  
@@ -65,6 +69,8 @@ public class Lab3P2_CarlosLagos {
                                 String invocacion;
                                 System.out.println("Ingrese el tipo de invocacion: ");
                                 invocacion = lea.nextLine();
+                                CS = 97;
+                                AC = 40;
                                 
                                 centinela1 = false;
                             }//fin 1
@@ -107,23 +113,103 @@ public class Lab3P2_CarlosLagos {
                                             centinela4 = true;
                                     }//fin switch
                                 }//fin while
-                                
-                                
-                                
+   
                                 centinela1 = false;
-                            }//fin 1
+                                System.out.println("Ingrese el nivel de xp: ");
+                                int xp = lea.nextInt();
+                                CS = 93;
+                                AC = 65;
+                            }//fin 2
                             break;
 
                             case 3: {
                                 System.out.println("Mago");
+                                String tmagia = "";
+                                boolean centinela5 = true;
+                                while (centinela5 == true) {
+                                    System.out.println("Tipos de Magia");
+                                    System.out.println("1) Mago Blanco");
+                                    System.out.println("2) Mago Negro");
+                                    System.out.println("3) Sanador");
+                                    System.out.println("Ingrese el numero del tipo de magia que quiere para su personaje: ");
+                                    int oparma = lea.nextInt();
+
+                                    switch (oparma) {
+                                        case 1: {
+                                            tmagia = "Mago Blanco";
+                                            centinela5 = false;
+                                        }//fin 1
+                                        break;
+
+                                        case 2: {
+                                            tmagia = "Mago Negro";
+                                            centinela5 = false;
+                                        }//fin 2
+                                        break;
+
+                                        case 3: {
+                                            tmagia = "Sanador";
+                                            centinela5 = false;
+                                        }//fin 3
+                                        break;
+
+                                        default:
+                                            System.out.println("Opcion no disponible");
+                                            centinela5 = true;
+                                    }//fin switch
+                                }//fin while
+                                
                                 centinela1 = false;
-                            }//fin 1
+                                CS = 101;
+                                AC = 20;
+                            }//fin 3
                             break;
 
                             case 4: {
                                 System.out.println("Pícaro");
-                                centinela1 = false;  
-                            }//fin 1
+                                String tinstrumento = "";
+                                boolean centinela6 = true;
+                                while (centinela6 == true) {
+                                    System.out.println("Tipos de Instrumentos");
+                                    System.out.println("1) Amuleto");
+                                    System.out.println("2) Arma");
+                                    System.out.println("3) Piedra Antigua");
+                                    System.out.println("Ingrese el numero del tipo de instrumento que quiere para su personaje: ");
+                                    int oinstrumento = lea.nextInt();
+
+                                    switch (oinstrumento) {
+                                        case 1: {
+                                            tinstrumento = "Amuleto";
+                                            centinela6 = false;
+                                        }//fin 1
+                                        break;
+
+                                        case 2: {
+                                            tinstrumento = "Arma";
+                                            centinela6 = false;
+                                        }//fin 2
+                                        break;
+
+                                        case 3: {
+                                            tinstrumento = "Piedra Antigua";
+                                            centinela6 = false;
+                                        }//fin 3
+                                        break;
+
+                                        default:
+                                            System.out.println("Opcion no disponible");
+                                            centinela6 = true;
+                                    }//fin switch
+                                }//fin while
+                                
+                                centinela1 = false;
+                                
+                                System.out.println("Ingrese la cantidad de robos: ");
+                                int cantrobos = lea.nextInt();
+                                CS = 80;
+                                AC = 50;
+                                
+                            }//fin 4
                             break;
                             
                             default:
@@ -152,24 +238,28 @@ public class Lab3P2_CarlosLagos {
                         switch (opcion3) {
                             case 1: {
                                 raza = "Mediano";
+                                HP = 50 + r.nextInt(10);
                                 centinela2 = false;
                             }//fin 1
                             break;
 
                             case 2: {
                                 raza = "Enano";
+                                HP = 80 + r.nextInt(20);
                                 centinela2 = false;
                             }//fin 2
                             break;
 
                             case 3: {
                                 raza = "Elfo";
+                                HP = 50 + r.nextInt(20);
                                 centinela2 = false;
                             }//fin 3
                             break;
 
                             case 4: {
                                 raza = "Humano";
+                                HP = 40 + r.nextInt(35);
                                 centinela2 = false;  
                             }//fin 4
                             break;
