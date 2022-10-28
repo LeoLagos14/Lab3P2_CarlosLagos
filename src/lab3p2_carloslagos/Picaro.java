@@ -11,4 +11,6 @@ package lab3p2_carloslagos;
  */
 public class Picaro {
     
-}
+    private String tinstrumento;
+    private int cantrobos;
+}//fin clase

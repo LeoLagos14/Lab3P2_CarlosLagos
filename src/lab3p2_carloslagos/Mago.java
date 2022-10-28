@@ -11,4 +11,6 @@ package lab3p2_carloslagos;
  */
 public class Mago {
     
-}
+    private String tmagia;
+    
+}//fin clase
