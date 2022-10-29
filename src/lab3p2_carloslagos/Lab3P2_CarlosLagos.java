@@ -433,7 +433,7 @@ public class Lab3P2_CarlosLagos {
                     
                     tipoP = "";
                     boolean centinela4 = true;
-                    while (centinela3 == true) {                        
+                    while (centinela4 == true) {                        
                         System.out.println("Elija la nacionalidad para su Personaje: ");
                         System.out.println("1) Mediano");
                         System.out.println("2) Enano");
@@ -475,7 +475,7 @@ public class Lab3P2_CarlosLagos {
                             
                             default:
                                 System.out.println("Opcion no disponible");
-                                centinela2 = true;
+                                centinela4 = true;
 
                         }//fin switch
                     }//fin while
@@ -505,7 +505,7 @@ public class Lab3P2_CarlosLagos {
                     System.out.println("Ingrese la posicion del personaje a modificar: ");
                     int pos = lea.nextInt();
                     
-                    if (pos > 0 && pos <= personajes.size() - 1) {
+                    if (pos >= 0 && pos <= personajes.size() - 1) {
                         System.out.println("1) Nombre");
                         System.out.println("2) Raza");
                         System.out.println("3) Estatura");
@@ -516,28 +516,159 @@ public class Lab3P2_CarlosLagos {
                         System.out.println("--- Cambio Atributos de las clases de Personajes ---");
                         if (personajes.get(pos) instanceof Clerigo) {
                             
+                            System.out.println("Cambiar Atributos Clerigo:");
                             System.out.println("8) Cambiar Dios/Demonio");
                             System.out.println("9) Cambiar tipo de invocacion");
                             
                         }else if (personajes.get(pos) instanceof Barbaro) {
                             
+                            System.out.println("Cambiar Atributos Barbaro:");
                             System.out.println("10) Cambiar tipo de arma");
                             System.out.println("11) Cambiar nivel XP");
                             
                         }else if (personajes.get(pos) instanceof Mago) {
                             
+                            System.out.println("Cambiar Atributos Mago:");
                             System.out.println("12) Cambiar tipo de Magia");
                             
                         }else if (personajes.get(pos) instanceof Picaro) {
                             
+                            System.out.println("Cambiar Atributos Picaro:");
                             System.out.println("13) Cambiar tipo de de instrumento");
                             System.out.println("14) Cambiar cantidad de robos");
                         }
                         
+                        if (pos == 1) {
+                            System.out.println("Ingrese el nombre: ");
+                            nombre = lea.next();
+                            
+                            ((Personajes)personajes.get(pos)).setNombre(nombre);
+                        }else if (pos == 2) {
+                            
+                            boolean centinela2 = true;
+                            while (centinela2 == true) {
+                                System.out.println("Elija la raza para su Personajee: ");
+                                System.out.println("1) Mediano");
+                                System.out.println("2) Enano");
+                                System.out.println("3) Elfo");
+                                System.out.println("4) Humano");
+                                System.out.println("Ingrese el numero donde esta la raza que desea cambiar: ");
+                                int opcion3 = lea.nextInt();
+
+                                switch (opcion3) {
+                                    case 1: {
+                                        raza = "Mediano";
+
+                                        centinela2 = false;
+                                    }//fin 1
+                                    break;
+
+                                    case 2: {
+                                        raza = "Enano";
+
+                                        centinela2 = false;
+                                    }//fin 2
+                                    break;
+
+                                    case 3: {
+                                        raza = "Elfo";
+
+                                        centinela2 = false;
+                                    }//fin 3
+                                    break;
+
+                                    case 4: {
+                                        raza = "Humano";
+
+                                        centinela2 = false;
+                                    }//fin 4
+                                    break;
+
+                                    default:
+                                        System.out.println("Opcion no disponible");
+                                        centinela2 = true;
+
+                                }//fin switch
+                            }//fin while
+                            
+                            ((Personajes)personajes.get(pos)).setRaza(raza);
+                        }else if (pos == 3) {
+                            System.out.println("Ingrese la nueva estatura: ");
+                            altura = lea.nextDouble();
+                            ((Personajes)personajes.get(pos)).setAltura(altura);
+                            
+                        }else if (pos == 4) {
+                            System.out.println("Ingrese el nuevo peso: ");
+                            peso = lea.nextDouble();
+                            ((Personajes)personajes.get(pos)).setPeso(peso);
+                        }else if (pos == 5) {
+                            System.out.println("Ingrese la nueva edad: ");
+                            years = lea.nextInt();
+                            ((Personajes)personajes.get(pos)).setYears(years);
+                        }else if (pos == 6) {
+                            System.out.println("Ingrese la nueva descripcion: ");
+                            descripcion = lea.next();
+                            ((Personajes)personajes.get(pos)).setDescripcion(descripcion);
+                        }else if (pos == 7) {
+                            boolean centinela4 = true;
+                            while (centinela4 == true) {
+                                System.out.println("Elija la nacionalidad para su Personaje: ");
+                                System.out.println("1) Mediano");
+                                System.out.println("2) Enano");
+                                System.out.println("3) Elfo");
+                                System.out.println("4) Humano");
+                                System.out.println("Ingrese el numero donde esta la nacionalidad que desea: ");
+                                int opcion3 = lea.nextInt();
+
+                                switch (opcion3) {
+                                    case 1: {
+                                        tipoP = "Lead";
+                                        centinela4 = false;
+                                    }//fin 1
+                                    break;
+
+                                    case 2: {
+                                        tipoP = "Support";
+                                        centinela4 = false;
+                                    }//fin 2
+                                    break;
+
+                                    case 3: {
+                                        tipoP = "Offensive";
+                                        centinela4 = false;
+                                    }//fin 3
+                                    break;
+
+                                    case 4: {
+                                        tipoP = "Spammer";
+                                        centinela4 = false;
+                                    }//fin 4
+                                    break;
+
+                                    case 5: {
+                                        tipoP = "Tank";
+                                        centinela4 = false;
+                                    }//fin 5
+                                    break;
+
+                                    default:
+                                        System.out.println("Opcion no disponible");
+                                        centinela4 = true;
+
+                                }//fin switch
+                            }//fin while
+                            ((Personajes) personajes.get(pos)).setNacionalidad(nacionalidad);
+                        }else if (pos == 8) {
+                            
+                        }else if (pos == 9) {
+                            
+                        }
                         
                     }else{//fin if pos
                         System.out.println("No existe ese personaje");
                     }
+                    
+                    System.out.println(pos);
                 }//fin caso 2
                 break;
                 
