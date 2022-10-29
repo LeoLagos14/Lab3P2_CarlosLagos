@@ -515,16 +515,26 @@ public class Lab3P2_CarlosLagos {
                         System.out.println("7) Nacionalidad");
                         System.out.println("--- Cambio Atributos de las clases de Personajes ---");
                         if (personajes.get(pos) instanceof Clerigo) {
+                            
                             System.out.println("8) Cambiar Dios/Demonio");
                             System.out.println("9) Cambiar tipo de invocacion");
+                            
+                        }else if (personajes.get(pos) instanceof Barbaro) {
+                            
+                            System.out.println("10) Cambiar tipo de arma");
+                            System.out.println("11) Cambiar nivel XP");
+                            
+                        }else if (personajes.get(pos) instanceof Mago) {
+                            
+                            System.out.println("12) Cambiar tipo de Magia");
+                            
+                        }else if (personajes.get(pos) instanceof Picaro) {
+                            
+                            System.out.println("13) Cambiar tipo de de instrumento");
+                            System.out.println("14) Cambiar cantidad de robos");
                         }
                         
-                        System.out.println("10) Nombre");
-                        System.out.println("11) Nombre");
-                        System.out.println("12) Nombre");
-                        System.out.println("13) Nombre");
-                        System.out.println("14) Nombre");
-                        System.out.println("15) Nombre");
+                        
                     }else{//fin if pos
                         System.out.println("No existe ese personaje");
                     }
