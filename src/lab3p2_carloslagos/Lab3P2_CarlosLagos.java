@@ -506,7 +506,25 @@ public class Lab3P2_CarlosLagos {
                     int pos = lea.nextInt();
                     
                     if (pos > 0 && pos <= personajes.size() - 1) {
+                        System.out.println("1) Nombre");
+                        System.out.println("2) Raza");
+                        System.out.println("3) Estatura");
+                        System.out.println("4) Peso");
+                        System.out.println("5) Años");
+                        System.out.println("6) Descripcion");
+                        System.out.println("7) Nacionalidad");
+                        System.out.println("--- Cambio Atributos de las clases de Personajes ---");
+                        if (personajes.get(pos) instanceof Clerigo) {
+                            System.out.println("8) Cambiar Dios/Demonio");
+                            System.out.println("9) Cambiar tipo de invocacion");
+                        }
                         
+                        System.out.println("10) Nombre");
+                        System.out.println("11) Nombre");
+                        System.out.println("12) Nombre");
+                        System.out.println("13) Nombre");
+                        System.out.println("14) Nombre");
+                        System.out.println("15) Nombre");
                     }else{//fin if pos
                         System.out.println("No existe ese personaje");
                     }
