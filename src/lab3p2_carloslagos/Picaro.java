@@ -62,7 +62,7 @@ public class Picaro extends Personajes{
 
     @Override
     public String toString() {
-        return "Picaro{" + "tinstrumento=" + tinstrumento + ", cantrobos=" + cantrobos + '}';
+        return super.toString() + "Picaro{" + "tinstrumento=" + tinstrumento + ", cantrobos=" + cantrobos + '}';
     }
     
     

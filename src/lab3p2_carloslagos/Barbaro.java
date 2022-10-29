@@ -62,7 +62,7 @@ public class Barbaro extends Personajes{
 
     @Override
     public String toString() {
-        return "Barbaro{" + "tarma=" + tarma + ", xp=" + xp + '}';
+        return super.toString() + "Barbaro{" + "tarma=" + tarma + ", xp=" + xp + '}';
     }
     
     

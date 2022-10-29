@@ -51,7 +51,7 @@ public class Mago extends Personajes{
 
     @Override
     public String toString() {
-        return "Mago{" + "tmagia=" + tmagia + '}';
+        return super.toString() + "Mago{" + "tmagia=" + tmagia + '}';
     }
     
     

@@ -385,10 +385,11 @@ public class Lab3P2_CarlosLagos {
                     boolean centinela3 = true;
                     while (centinela3 == true) {                        
                         System.out.println("Elija la nacionalidad para su Personaje: ");
-                        System.out.println("1) Mediano");
-                        System.out.println("2) Enano");
-                        System.out.println("3) Elfo");
-                        System.out.println("4) Humano");
+                        System.out.println("1) Norfair");
+                        System.out.println("2) Brinstar");
+                        System.out.println("3) Maridia");
+                        System.out.println("4) Zebes");
+                        System.out.println("5) Crateria");
                         System.out.println("Ingrese el numero donde esta la nacionalidad que desea: ");
                         int opcion3 = lea.nextInt();
                         
@@ -499,18 +500,46 @@ public class Lab3P2_CarlosLagos {
                 break;
                 
                 case 2:{
+                   System.out.println("--- Modificar Personaje ---");
                    
+                    System.out.println("Ingrese la posicion del personaje a modificar: ");
+                    int pos = lea.nextInt();
+                    
+                    if (pos > 0 && pos <= personajes.size() - 1) {
+                        
+                    }else{//fin if pos
+                        System.out.println("No existe ese personaje");
+                    }
                 }//fin caso 2
                 break;
                 
                 case 3:{
-                  
+                    System.out.println("Listar los Personajes");
+                    String listar = "";
+                    for (Object t : personajes) {
+                        if (t instanceof Personajes) {
+                            listar += personajes.indexOf(t) + " - " + t + "\n";//get class se puede usar tambien
+                        }
+
+                    }
+                    System.out.println(listar);
+                    System.out.println();
+                    System.out.println();
                     
                 }//fin caso 3
                 break;
                 
                 case 4:{
+                    System.out.println("--- Eliminar Personaje ---");
+                    System.out.println("Ingrese la posicion de la lista de personajes para borrar: ");
+                    int posicion = lea.nextInt();
                     
+                    if (posicion > 0 && posicion <= personajes.size() - 1) {
+                        personajes.remove(posicion);
+                        System.out.println("Se elimino exitosamente!");
+                    }else{
+                        System.out.println("No existe ese personaje");
+                    }
                 }//fin caso 4
                 break;
                 
