@@ -11,17 +11,17 @@ package lab3p2_carloslagos;
  */
 public class Personajes {
     
-    protected int HP,AC,DG,years;
+    protected int HP,CS,AC,years;
     protected String nombre,raza,nacionalidad,tipoP,descripcion,tpersonaje;
     protected double altura,peso;
 
     public Personajes() {
     }
 
-    public Personajes(int HP, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso,String descripcion,String tpersonaje) {
+    public Personajes(int HP,int CS, int AC, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso,String descripcion,String tpersonaje) {
         this.HP = HP;
+        this.CS = CS;
         this.AC = AC;
-        this.DG = DG;
         this.years = years;
         this.nombre = nombre;
         this.raza = raza;
@@ -31,6 +31,7 @@ public class Personajes {
         this.peso = peso;
         this.descripcion = descripcion;
         this.tpersonaje = tpersonaje;
+        
     }
 
     public int getHP() {
@@ -48,13 +49,12 @@ public class Personajes {
     public void setAC(int AC) {
         this.AC = AC;
     }
-
-    public int getDG() {
-        return DG;
+    public int getCS() {
+        return AC;
     }
 
-    public void setDG(int DG) {
-        this.DG = DG;
+    public void setCS(int CS) {
+        this.CS = CS;
     }
 
     public int getYears() {
@@ -133,7 +133,7 @@ public class Personajes {
 
     @Override
     public String toString() {
-        return "Personajes{" + "HP=" + HP + ", AC=" + AC + ", DG=" + DG + ", years=" + years + ", nombre=" + nombre + ", raza=" + raza + ", nacionalidad=" + nacionalidad + ", tipoP=" + tipoP + ", altura=" + altura + ", peso=" + peso + '}';
+        return "Personajes{" + "HP=" + HP + ", CS=" + CS + ", AC=" + AC + ", years=" + years + ", nombre=" + nombre + ", raza=" + raza + ", nacionalidad=" + nacionalidad + ", tipoP=" + tipoP + ", altura=" + altura + ", peso=" + peso + '}';
     }
     
     

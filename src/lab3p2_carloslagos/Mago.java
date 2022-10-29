@@ -20,8 +20,8 @@ public class Mago extends Personajes{
         this.tmagia = tmagia;
     }
 
-    public Mago(String tmagia, int HP, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso, String descripcion,String tpersonaje) {
-        super(HP, AC, DG, years, nombre, raza, nacionalidad, tipoP, altura, peso, descripcion,tpersonaje);
+    public Mago(String tmagia, int HP,int CS, int AC, int DG, int years, String nombre, String raza, String nacionalidad, String tipoP, double altura, double peso, String descripcion,String tpersonaje) {
+        super(HP, AC, CS,years, nombre, raza, nacionalidad, tipoP, altura, peso, descripcion,tpersonaje);
         this.tmagia = tmagia;
     }
 

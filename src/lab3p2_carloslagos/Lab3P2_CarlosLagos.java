@@ -22,11 +22,13 @@ public class Lab3P2_CarlosLagos {
         Scanner lea = new Scanner(System.in);
         Random r = new Random();
         ArrayList personajes = new ArrayList();
-        int HP = 0;
-        int CS = 0;
-        int AC = 0;
+        int HP = 0,AC = 0,years = 0,CS = 0,xp = 0,cantrobos = 0;
+        String nombre = "",raza = "",nacionalidad = "",tipoP = "",descripcion = "",tpersonaje = "",arma = "",creencia = "",invocacion = "",tinstrumento = "",tmagia = "";
+        double altura = 0.0,peso = 0.0;
+        int opcion1 = 0;
+        
         int DG = 0;
-        String tpersonaje = "";
+        
         
         boolean centinela = true;
  
@@ -56,20 +58,22 @@ public class Lab3P2_CarlosLagos {
                         System.out.println("3) Mago");
                         System.out.println("4) Picaro");
                         System.out.println("Ingrese el numero donde esta la clase de personaje que desea: ");
-                        int opcion1 = lea.nextInt();
+                        opcion1 = lea.nextInt();
                         
 
                         switch (opcion1) {
                             case 1: {
                                 
                                 System.out.println("Clerigo");
-                                String creencia;
+                                
                                 System.out.println("Ingrese el Dios/demonio del cual su personaje es creyente: ");
                                 lea.nextLine();
                                 creencia = lea.nextLine();
-                                String invocacion;
+                                System.out.println(creencia);
+                               
                                 System.out.println("Ingrese el tipo de invocacion: ");
                                 invocacion = lea.nextLine();
+                                System.out.println(invocacion);
                                 CS = 97;
                                 AC = 40;
                                 System.out.println("El tipo de personaje del Clerigo es Lead");
@@ -82,7 +86,7 @@ public class Lab3P2_CarlosLagos {
                             case 2: {
                                
                                 System.out.println("Barbaro");
-                                String arma = "";
+                                arma = "";
                                 boolean centinela4 = true;
                                 while (centinela4 == true) {
                                     System.out.println("Tipos de arma");
@@ -119,7 +123,7 @@ public class Lab3P2_CarlosLagos {
    
                                 centinela1 = false;
                                 System.out.println("Ingrese el nivel de xp: ");
-                                int xp = lea.nextInt();
+                                xp = lea.nextInt();
                                 CS = 93;
                                 AC = 65;
                                 tpersonaje = "";
@@ -161,7 +165,7 @@ public class Lab3P2_CarlosLagos {
 
                             case 3: {
                                 System.out.println("Mago");
-                                String tmagia = "";
+                                tmagia = "";
                                 boolean centinela5 = true;
                                 while (centinela5 == true) {
                                     System.out.println("Tipos de Magia");
@@ -199,12 +203,39 @@ public class Lab3P2_CarlosLagos {
                                 centinela1 = false;
                                 CS = 101;
                                 AC = 20;
+                                tpersonaje = "";
+                                boolean centinela8 = true;
+                                while (centinela8 == true) {
+                                    System.out.println("Tipos de personajes para Magos");
+                                    System.out.println("1) Support");
+                                    System.out.println("2) Tank");
+                                    System.out.println("Ingrese el tipo de personajes que quiere para su personaje: ");
+                                    int tp = lea.nextInt();
+
+                                    switch (tp) {
+                                        case 1: {
+                                            tpersonaje = "Support";
+                                            centinela8 = false;
+                                        }//fin 1
+                                        break;
+
+                                        case 2: {
+                                            tpersonaje = "Tank";
+                                            centinela8 = false;
+                                        }//fin 2
+                                        break;
+
+                                        default:
+                                            System.out.println("Opcion no disponible");
+                                            centinela8 = true;
+                                    }//fin switch
+                                }//fin while
                             }//fin 3
                             break;
 
                             case 4: {
                                 System.out.println("Pícaro");
-                                String tinstrumento = "";
+                                tinstrumento = "";
                                 boolean centinela6 = true;
                                 while (centinela6 == true) {
                                     System.out.println("Tipos de Instrumentos");
@@ -242,9 +273,36 @@ public class Lab3P2_CarlosLagos {
                                 centinela1 = false;
                                 
                                 System.out.println("Ingrese la cantidad de robos: ");
-                                int cantrobos = lea.nextInt();
+                                cantrobos = lea.nextInt();
                                 CS = 80;
                                 AC = 50;
+                                tpersonaje = "";
+                                boolean centinela9 = true;
+                                while (centinela9 == true) {
+                                    System.out.println("Tipos de personajes para Picaros");
+                                    System.out.println("1) Spammer");
+                                    System.out.println("2) Tank");
+                                    System.out.println("Ingrese el tipo de personajes que quiere para su personaje: ");
+                                    int tp = lea.nextInt();
+
+                                    switch (tp) {
+                                        case 1: {
+                                            tpersonaje = "Spammer";
+                                            centinela9 = false;
+                                        }//fin 1
+                                        break;
+
+                                        case 2: {
+                                            tpersonaje = "Tank";
+                                            centinela9 = false;
+                                        }//fin 2
+                                        break;
+
+                                        default:
+                                            System.out.println("Opcion no disponible");
+                                            centinela9 = true;
+                                    }//fin switch
+                                }//fin while
                                 
                             }//fin 4
                             break;
@@ -259,9 +317,9 @@ public class Lab3P2_CarlosLagos {
                     
                     
                     System.out.println("Ingrese el nombre de su Personaje: ");
-                    String nombre = lea.next();
+                    nombre = lea.next();
                     
-                    String raza = "";
+                    raza = "";
                     boolean centinela2 = true;
                     while (centinela2 == true) {                        
                         System.out.println("Elija la raza para su Personajee: ");
@@ -310,20 +368,20 @@ public class Lab3P2_CarlosLagos {
                     
                     
                     System.out.println("Ingrese la estatura: ");
-                    double altura = lea.nextInt();
+                    altura = lea.nextInt();
                     
                     System.out.println("Ingrese el peso: ");
-                    double peso = lea.nextDouble();
+                    peso = lea.nextDouble();
                     
                     System.out.println("Ingrese los años que tiene su personaje: ");
-                    int years = lea.nextInt();
+                    years = lea.nextInt();
                     
                     String desc;
                     System.out.println("Ingrese la descripcion de su personaje: ");
                     lea.nextLine();
                     desc = lea.nextLine();
                     
-                    String  nacionalidad = "";
+                    nacionalidad = "";
                     boolean centinela3 = true;
                     while (centinela3 == true) {                        
                         System.out.println("Elija la nacionalidad para su Personaje: ");
@@ -372,7 +430,7 @@ public class Lab3P2_CarlosLagos {
                         }//fin switch
                     }//fin while
                     
-                    String  tipoP = "";
+                    tipoP = "";
                     boolean centinela4 = true;
                     while (centinela3 == true) {                        
                         System.out.println("Elija la nacionalidad para su Personaje: ");
@@ -421,7 +479,19 @@ public class Lab3P2_CarlosLagos {
                         }//fin switch
                     }//fin while
                     
-                    
+                    if (opcion1 == 1) {
+                        personajes.add(new Clerigo(creencia,invocacion,HP,CS,AC,DG,years,nombre,raza,nacionalidad,tipoP,altura,peso,descripcion,tpersonaje));
+                        System.out.println("Se agrego correctamente");
+                    }else if (opcion == 2) {
+                        personajes.add(new Barbaro(arma,xp,HP,CS,AC,DG,years,nombre,raza,nacionalidad,tipoP,altura,peso,descripcion,tpersonaje));
+                        System.out.println("Se agrego correctamente");
+                    }else if (opcion == 3) {
+                        personajes.add(new Mago(tmagia,HP,CS,AC,DG,years,nombre,raza,nacionalidad,tipoP,altura,peso,descripcion,tpersonaje));
+                        System.out.println("Se agrego correctamente");
+                    }else if (opcion == 4) {
+                        personajes.add(new Picaro(tinstrumento,cantrobos,HP,CS,AC,DG,years,nombre,raza,nacionalidad,tipoP,altura,peso,descripcion,tpersonaje));
+                        System.out.println("Se agrego correctamente");
+                    }
                     
                     
                     
